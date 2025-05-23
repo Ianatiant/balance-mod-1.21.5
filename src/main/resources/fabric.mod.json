@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "balance-mod",
+	"version": "${version}",
+	"name": "balance-mod",
+	"description": "Adds balance commands for economy datapack",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/balance-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.ian.balmod.Balancemod"
+		],
+		"fabric-datagen": [
+			"net.ian.balmod.BalancemodDataGenerator"
+		],
+		"client": [
+			"net.ian.balmod.BalancemodClient"
+		]
+	},
+	"mixins": [
+		"balance-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
